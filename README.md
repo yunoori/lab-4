@@ -26,8 +26,9 @@ docker network inspect myNetwork
 ## Решение
 
 Запустим программу "aafire" внутри контейнера. Для этого создадим или изменим файл Dockerfile, добавив в него следующий код:
-FROM ubuntu:latest
 ```
+FROM ubuntu:latest
+
 RUN apt-get update && apt-get install -y libaa-bin
 RUN apt-get install -y iputils-ping
 CMD ["aafire"]
